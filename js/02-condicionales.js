@@ -11,13 +11,12 @@ const num = parseInt(prompt("Ingresa un número"));
 console.log(num);
 console.log(isNaN(num));
 //voy a preguntar si lo que ingrese no es un numero (isNaN), entonces muestro un cartel de error, caso contrario si es un número entonces hago la operacion que ya sabia hacer
-
-if (isNaN(num)) {
+// el operador logico que signifa Y = AND => &&
+// el operador logico que signifa O = OR => ||
+if (isNaN(num) || num <= 0) {
   pantalla.innerHTML = `<p>Ingresaste un valor erroneo</p>`;
+} else if (num % 2 === 0) {
+  pantalla.innerHTML = `<p>El número ingresado: ${num}  es par  </p>`;
 } else {
-  if (num % 2 === 0) {
-    pantalla.innerHTML = `<p>El número ingresado: ${num}  es par  </p>`;
-  } else {
-    pantalla.innerHTML = `<p>El número ingresado: ${num}  es impar  </p>`;
-  }
+  pantalla.innerHTML = `<p>El número ingresado: ${num}  es impar  </p>`;
 }
