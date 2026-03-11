@@ -18,9 +18,19 @@ const pantalla = document.getElementById('pantalla')
 // }
 
 
-let contador = 100
+ let contador = 100
 
-do{
-    pantalla.innerHTML += `<p>Fila ${contador}</p>`
-    contador++ //contador = contador + 1
-}while( contador <= 50)
+// do{
+//     pantalla.innerHTML += `<p>Fila ${contador}</p>`
+//     contador++ //contador = contador + 1
+// }while( contador <= 50)
+
+// for(declaro variable; condicion logica; incremendo/decremento la variable)
+
+for(let contador=1; contador <= 50 ; contador++ ){
+    // todas las lineas de codigo que quiero repetir varias veces
+     pantalla.innerHTML += `<p>Fila ${contador}</p>`
+}
+
+console.log(contador)
+
