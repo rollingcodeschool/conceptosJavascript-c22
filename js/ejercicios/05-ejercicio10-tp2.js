@@ -2,14 +2,16 @@
 
 const pantalla = document.getElementById("pantalla");
 const filas = parseInt(prompt("Ingresa un número de filas"));
+const columnas = parseInt(prompt("Ingresa un número de columnas"));
 
 let tabla = `<table class="table table-striped"><tbody>`;
 
 for (let indiceFilas = 1; indiceFilas <= filas; indiceFilas++) {
-  tabla += `<tr>
-                <td>1</td>
-                <td>2</td>
-            </tr>`;
+  tabla += `<tr>`;
+  for(let indiceColumnas=1; indiceColumnas <= columnas; indiceColumnas++){
+      tabla += `<td>1</td>`;
+  }
+  tabla += `</tr>`;
 }
 
 tabla += `</tbody></table>`;
