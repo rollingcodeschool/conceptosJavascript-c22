@@ -3,14 +3,14 @@
 const pantalla = document.getElementById("pantalla");
 const filas = parseInt(prompt("Ingresa un número de filas"));
 const columnas = parseInt(prompt("Ingresa un número de columnas"));
-let celda = filas * columnas
+let celda = filas * columnas;
 
 let tabla = `<table class="table table-striped"><tbody>`;
 
 for (let indiceFilas = 1; indiceFilas <= filas; indiceFilas++) {
   tabla += `<tr>`;
-  for(let indiceColumnas=1; indiceColumnas <= columnas; indiceColumnas++){
-      tabla += `<td>${celda--}</td>`;
+  for (let indiceColumnas = 1; indiceColumnas <= columnas; indiceColumnas++) {
+    tabla += `<td>${celda--}</td>`;
     //celda = celda -1
   }
   tabla += `</tr>`;
