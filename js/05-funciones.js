@@ -18,7 +18,7 @@ function saludarUsuario(nombreUsuario, edad = 20) {
   console.log(`Hola ${nombreUsuario}, tienes ${edad} años`);
 }
 
-// Expresion de funcion
+// Expresion de function
 // const calcularDescuento = function (precio, descuento){
 //  return precio - (precio * descuento) / 100;
 // }
