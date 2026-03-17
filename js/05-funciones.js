@@ -4,17 +4,28 @@ function saludar() {
   return "Hola mundo 🌎"
 }
 
+
+
+// funcion con valor de retorno
+// function calcularDescuento(precio, descuento) {
+// //   const total = 
+//   return precio - (precio * descuento) / 100;
+// }
+
 function saludarUsuario(nombreUsuario, edad = 20) {
   const pantalla = document.getElementById("pantalla");
   pantalla.innerHTML += `<p>Hola ${nombreUsuario}, tienes ${edad} años</p>`;
   console.log(`Hola ${nombreUsuario}, tienes ${edad} años`);
 }
 
-// funcion con valor de retorno
-function calcularDescuento(precio, descuento) {
-//   const total = 
-  return precio - (precio * descuento) / 100;
-}
+// Expresion de funcion
+// const calcularDescuento = function (precio, descuento){
+//  return precio - (precio * descuento) / 100;
+// }
+
+// arrow function
+const calcularDescuento = (precio, descuento) => precio - (precio * descuento) / 100;
+
 
 //invocar a una funcion
 saludar();
@@ -29,7 +40,7 @@ saludar();
 //     const usuario = prompt('Ingresa tu nombre')
 //     const edad = prompt('Ingresa tu edad')
 //     saludarUsuario(usuario, edad)
-//     saludarUsuario('Maria Belen')
+     saludarUsuario('Maria Belen')
 
 // }while(confirm('¿Queres realizar otra operacion?'))
 
@@ -42,3 +53,5 @@ const pantalla = document.getElementById("pantalla");
 pantalla.innerHTML += `<p>El precio del producto es $${precio}, el descuento aplicado es de ${descuento}%, el total a pagar es $${total}</p>`;
 
 pantalla.innerHTML += `<p>El precio del producto es $3000, el descuento aplicado es de 50%, el total a pagar es $${calcularDescuento(3000,50)}</p>`;
+
+
