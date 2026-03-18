@@ -3,7 +3,7 @@ const mostrarPeliculas = (notas) => {
   pantalla.innerHTML += `<p class='text-muted small'>Notas: ${notas}</p>`;
   let listaPeliculas = "<ul>";
   for (let i = 0; i < peliculas.length; i++) {
-    listaPeliculas += `<li>${peliculas[i]}</li>`;
+    listaPeliculas += `<li>${i+1}- ${peliculas[i]}</li>`;
   }
   listaPeliculas += "</ul>";
 
@@ -44,3 +44,9 @@ mostrarPeliculas('Este es el arreglo orginal')
 // como agregar elementos en el array
 peliculas.unshift("Super Mario Bros. La pelicula", "Shrek");
 mostrarPeliculas('Agregamos dos elementos al inicio del array')
+
+peliculas.push('Star Wars: El Regreso del Jedi', 'El Mundo Perdido: Jurassic Park' )
+mostrarPeliculas('Agregamos dos elementos al final del array')
+
+peliculas.splice(5,0,'Oppenheimer')
+mostrarPeliculas('Agregamos un elemento en el medio del array')
