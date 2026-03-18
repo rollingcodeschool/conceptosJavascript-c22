@@ -1,5 +1,16 @@
-// declarar un array vacio
+const mostrarPeliculas = (notas) => {
+  pantalla.innerHTML += `<h2>Lista de peliculas - elementos ${peliculas.length}</h2>`;
+  pantalla.innerHTML += `<p class='text-muted small'>Notas: ${notas}</p>`;
+  let listaPeliculas = "<ul>";
+  for (let i = 0; i < peliculas.length; i++) {
+    listaPeliculas += `<li>${peliculas[i]}</li>`;
+  }
+  listaPeliculas += "</ul>";
 
+  pantalla.innerHTML += listaPeliculas;
+};
+
+// declarar un array vacio
 const frutas = [];
 
 console.info(typeof frutas);
@@ -25,14 +36,11 @@ pantalla.innerHTML += `<p>El primer elemento del array de peliculas es ${pelicul
 pantalla.innerHTML += `<p>El ultimo elemento del array de peliculas es ${peliculas[peliculas.length - 1]}</p>`;
 
 //mostrar los elementos del array
-pantalla.innerHTML += peliculas
-
-let listaPeliculas = '<ul>'
-for(let i=0; i < peliculas.length; i++){
-    listaPeliculas += `<li>${peliculas[i]}</li>`
-}
-listaPeliculas += '</ul>'
-
-pantalla.innerHTML += listaPeliculas
-
+pantalla.innerHTML += peliculas;
 pantalla.innerHTML += `<p>El elemento del a posicion 10 del array de peliculas es ${peliculas[10]}</p>`;
+
+mostrarPeliculas('Este es el arreglo orginal')
+
+// como agregar elementos en el array
+peliculas.unshift("Super Mario Bros. La pelicula", "Shrek");
+mostrarPeliculas('Agregamos dos elementos al inicio del array')
