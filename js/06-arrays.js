@@ -50,3 +50,9 @@ mostrarPeliculas('Agregamos dos elementos al final del array')
 
 peliculas.splice(5,0,'Oppenheimer')
 mostrarPeliculas('Agregamos un elemento en el medio del array')
+
+//modificar un elemento del array
+peliculas[6] = "Jurassic World: Mundo Jurásico"
+mostrarPeliculas('Modificamos el elemento de la posicion 6 del array')
+
+//eliminar elementos del array
