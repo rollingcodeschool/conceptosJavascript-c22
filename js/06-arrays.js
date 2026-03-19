@@ -3,7 +3,7 @@ const mostrarPeliculas = (notas) => {
   pantalla.innerHTML += `<p class='text-muted small'>Notas: ${notas}</p>`;
   let listaPeliculas = "<ul>";
   for (let i = 0; i < peliculas.length; i++) {
-    listaPeliculas += `<li>${i+1}- ${peliculas[i]}</li>`;
+    listaPeliculas += `<li>${i + 1}- ${peliculas[i]}</li>`;
   }
   listaPeliculas += "</ul>";
 
@@ -23,7 +23,7 @@ const peliculas = [
   2010,
   true,
   "era del hielo",
-  "Jurassic Park",
+  "jurassic Park",
 ];
 console.log(peliculas);
 console.log(frutas);
@@ -39,20 +39,49 @@ pantalla.innerHTML += `<p>El ultimo elemento del array de peliculas es ${pelicul
 pantalla.innerHTML += peliculas;
 pantalla.innerHTML += `<p>El elemento del a posicion 10 del array de peliculas es ${peliculas[10]}</p>`;
 
-mostrarPeliculas('Este es el arreglo orginal')
+mostrarPeliculas("Este es el arreglo orginal");
 
 // como agregar elementos en el array
 peliculas.unshift("Super Mario Bros. La pelicula", "Shrek");
-mostrarPeliculas('Agregamos dos elementos al inicio del array')
+mostrarPeliculas("Agregamos dos elementos al inicio del array");
 
-peliculas.push('Star Wars: El Regreso del Jedi', 'El Mundo Perdido: Jurassic Park' )
-mostrarPeliculas('Agregamos dos elementos al final del array')
+peliculas.push(
+  "Star Wars: El Regreso del Jedi",
+  "El Mundo Perdido: Jurassic Park",
+);
+mostrarPeliculas("Agregamos dos elementos al final del array");
 
-peliculas.splice(5,0,'Oppenheimer')
-mostrarPeliculas('Agregamos un elemento en el medio del array')
+peliculas.splice(5, 0, "Oppenheimer");
+mostrarPeliculas("Agregamos un elemento en el medio del array");
 
 //modificar un elemento del array
-peliculas[6] = "Jurassic World: Mundo Jurásico"
-mostrarPeliculas('Modificamos el elemento de la posicion 6 del array')
+peliculas[6] = "Jurassic World: Mundo Jurásico";
+mostrarPeliculas("Modificamos el elemento de la posicion 6 del array");
 
 //eliminar elementos del array
+peliculas.shift();
+mostrarPeliculas("Eliminamos el primer elemento del array");
+
+peliculas.pop();
+mostrarPeliculas("Eliminamos el ultimo elemento del array");
+
+peliculas.splice(6, 1);
+// peliculas.splice(6) //borra todos los elementos desde la posicion 6 del array
+mostrarPeliculas("Eliminamos el elemento de la posicion 6 del array");
+
+// filtrar las pelis de jurassic park
+console.log(peliculas[5].includes("jurassic"));
+console.log(peliculas[5].includes("Jurassic"));
+console.log(peliculas[5].toUpperCase().includes("JURASSIC"));
+
+const peliculasFiltradas = peliculas.filter((pelicula) =>
+  pelicula.toLowerCase().includes("jurassic"),
+);
+console.log(peliculas);
+console.log(peliculasFiltradas);
+
+const aniosEstreno = [2010, 2000, 2010, 2020, 2014, 2025];
+
+const arrayFiltrado = aniosEstreno.filter((item)=> item >= 2014 )
+console.log(arrayFiltrado)
+
