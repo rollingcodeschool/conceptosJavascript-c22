@@ -74,6 +74,8 @@ console.log(peliculas[5].includes("jurassic"));
 console.log(peliculas[5].includes("Jurassic"));
 console.log(peliculas[5].toUpperCase().includes("JURASSIC"));
 
+//agrego una nueva peli
+peliculas.push("El Mundo Perdido: Jurassic Park");
 const peliculasFiltradas = peliculas.filter((pelicula) =>
   pelicula.toLowerCase().includes("jurassic"),
 );
@@ -82,6 +84,23 @@ console.log(peliculasFiltradas);
 
 const aniosEstreno = [2010, 2000, 2010, 2020, 2014, 2025];
 
-const arrayFiltrado = aniosEstreno.filter((item)=> item >= 2014 )
+const arrayFiltrado = aniosEstreno.filter((item)=> item >= 2014)
 console.log(arrayFiltrado)
 
+// método map
+pantalla.innerHTML += `<h2>Pelicas de Jurassic Park 🦖</h2>`
+
+const itemsLista = peliculasFiltradas.map((item) => `<li>${item}</li>`).join(' ')
+pantalla.innerHTML += `<ul>${itemsLista}</ul>`;
+
+// metodo find
+const peliBuscada = peliculas.find((peli)=> peli === 'toy story' )
+const peliBuscada2 = peliculas.find((peli)=> peli === 'top gun' )
+console.log(peliBuscada)
+console.log(peliBuscada2)
+
+// metodo findIndex
+const posicionToyStory = peliculas.findIndex((peli)=> peli.toLowerCase() === 'toy story' )
+const posiciontopGun = peliculas.findIndex((peli)=> peli === 'top gun' )
+console.log('La peli toy story esta en la posicion: '+ posicionToyStory)
+console.log('La peli top gun esta en la posicion: '+ posiciontopGun)
