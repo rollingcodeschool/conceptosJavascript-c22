@@ -5,7 +5,6 @@
 //objeto: cancion
 //propiedades: genero, duracion, cantante, anio, titulo
 //metodos: reproducir(), pausar(), modificarVelocidad(velocidad)
-
 //notacion literal
 const pelicula = {
   //propiedades
@@ -20,9 +19,13 @@ const pelicula = {
   //   },
   //metodos
   reproducir: function () {
+    console.log(this)
+    const texto = `<p class='lead'>Comenzo la reproducción de la pelicula "${this.titulo}" ▶️</p>`
     console.log("Comenzo la reproducción de la pelicula");
+    return texto
   },
   stop: () => {
+    console.log(this)
     console.log("Se detuvo la pelicula");
   },
 };
@@ -79,3 +82,12 @@ pantalla.innerHTML += `<p>Año : ${pelicula.anio}</p>`;
 delete pelicula.publicado;
 pantalla.innerHTML += `<p>Publicado : ${pelicula.publicado ? "Si" : "No existe"}</p>`;
 console.log(pelicula);
+
+// como usar los métodos de un objeto
+
+
+pantalla.innerHTML += pelicula.reproducir();
+
+pelicula.stop()
+
+console.log(this)
